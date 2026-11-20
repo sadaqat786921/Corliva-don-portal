@@ -92,6 +92,9 @@ Every record opens on its **own full screen** with a back link to where you came
 - Who approves care plans: Care Supervisor, Director of Nursing, or Supervisor then Director for high-risk clients? (Now: either can approve.)
 - When the Director covers for the Administrator, should they see Admin screens? (Now: not included.)
 
+## Other roles
+- **HR Officer** — own portal: `sadaqat786921/Corliva-hr-officer-portal` (employment, requirements and checks, time off, ready to work; changes flag the caregiver's upcoming visits for the coordinator).
+
 ## Run
 ```
 npm install
