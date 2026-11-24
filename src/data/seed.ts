@@ -124,7 +124,7 @@ export const users: User[] = [
   { id: 'u3', name: 'Lena Ortiz', email: 'lena@royalityhomecare.com', role: 'HR Officer', branch: 'north', status: 'Active', phone: '(217) 555-0103' },
   { id: 'u8', name: 'Sara Kim', email: 'sara@royalityhomecare.com', role: 'Care Coordinator', branch: 'north', status: 'Active', phone: '(217) 555-0108' },
   { id: 'u4', name: 'Daniel Reed', email: 'daniel@royalityhomecare.com', role: 'Care Coordinator', branch: 'south', status: 'Active', phone: '(217) 555-0104' },
-  { id: 'u5', name: 'Nina Patel', email: 'nina@royalityhomecare.com', role: 'Finance Officer', branch: 'all', status: 'Active', phone: '(217) 555-0105' },
+  { id: 'u5', name: 'Omar Haddad', email: 'omar@royalityhomecare.com', role: 'Finance Officer', branch: 'all', status: 'Active', phone: '(217) 555-0105' },
 ]
 
 export const lists: Record<string, ListItem[]> = {
@@ -286,7 +286,7 @@ function buildVisits(): Visit[] {
       const finish = (inAt: string, outAt: string) => {
         v.status = 'Completed'; v.checkIn = inAt; v.checkOut = outAt; v.place = HOME; v.tasksDone = [...(plan?.tasks ?? [])]
         if (day >= -REVIEW_DAYS) v.approval = 'To review'
-        else { v.approval = 'Approved'; v.approvedBy = c.branch === 'south' ? 'Laura Chen' : 'Michael Brooks'; v.approvedAt = stampFor(day + 1, '10:00'); if (day <= -7) v.billing = 'Invoiced' }
+        else { v.approval = 'Approved'; v.approvedBy = c.branch === 'south' ? 'Laura Chen' : 'Michael Brooks'; v.approvedAt = stampFor(day + 1, '10:00'); if (day <= -7 && !['c1', 'c9', 'c12'].includes(cid)) v.billing = 'Invoiced' }
       }
       if (day < 0) { if (missed) { v.status = 'Cancelled'; v.cancelReason = 'No caregiver available' } else finish(shift(start, 2), shift(end, 1)) }
       else if (day === 0) {

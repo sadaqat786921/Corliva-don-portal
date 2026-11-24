@@ -95,6 +95,7 @@ Every record opens on its **own full screen** with a back link to where you came
 ## Other roles
 - **HR Officer** — own portal: `sadaqat786921/Corliva-hr-officer-portal` (employment, requirements and checks, time off, ready to work; changes flag the caregiver's upcoming visits for the coordinator).
 - **Caregiver** — own portal: `sadaqat786921/corliva-caregiver-portal` (phone-friendly: their visits, check in and out, tasks, notes, sending the visit record, reporting a problem, sending documents to HR).
+- **Finance Officer** — own portal: `sadaqat786921/corliva-finance-officer-portal` (bills approved visits, records payments, money owed, timesheets and payroll exports; applies adjustments asked for after invoicing).
 
 ## Run
 ```

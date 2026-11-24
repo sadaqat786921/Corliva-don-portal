@@ -18,7 +18,7 @@ export default function Settings() {
 
   return (
     <>
-      <PageHead title="Settings" crumb="Settings" sub="Your own profile and sign-in. Your own profile and sign-in." />
+      <PageHead title="Settings" crumb="Settings" sub="Your own profile and sign-in." />
       <div className="card">
         <div style={{ padding: '0 16px' }}><Tabs value={tab} onChange={t => setParams(t === 'security' ? { tab: 'security' } : {})} tabs={[{ id: 'profile', label: 'My profile' }, { id: 'security', label: 'Password & security' }]} /></div>
         {tab === 'profile' ? (
